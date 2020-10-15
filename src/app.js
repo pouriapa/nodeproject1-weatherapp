@@ -5,6 +5,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+console.log("the main nodejs file is up and running")
+
 const app = express();
 
 // Define Path for Express Config
