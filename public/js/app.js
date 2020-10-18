@@ -24,10 +24,10 @@ weatherForm.addEventListener('submit', (e)=>{
 
      fetch(`/weather?address=${address}`).then((response)=>{
             response.json().then((data)=>{
-           temp.value = data.temperature
-           feelslike.value = data.feelslike
-           location.value = data.place
-           
+                temp.value = data.temperature
+                feelslike.value = data.feelslike
+                location.value = data.place
+
             })
 
     })
