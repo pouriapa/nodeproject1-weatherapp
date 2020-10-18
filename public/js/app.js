@@ -11,9 +11,9 @@
 
 const weatherForm = document.querySelector('form')
 const searchVal = document.querySelector('input')
-const temp = document.querySelector('#temp')
-const feelslike = document.querySelector('#feelslike')
-const location =  document.querySelector('#location')
+ const temp = document.querySelector('#temp')
+ const feelslike = document.querySelector('#feelslike')
+ const loc =  document.querySelector('#location')
 
 weatherForm.addEventListener('submit', (e)=>{
 
@@ -24,9 +24,9 @@ weatherForm.addEventListener('submit', (e)=>{
 
      fetch(`/weather?address=${address}`).then((response)=>{
             response.json().then((data)=>{
-                temp.value = data.temperature
-                feelslike.value = data.feelslike
-                location.value = data.place
+                temp.textContent = `the temperature is : ${data.temperature}`
+                feelslike.textContent =` but it feels like : ${data.feelslike}`
+                loc.textContent = `in ${data.place}`
 
             })
 
